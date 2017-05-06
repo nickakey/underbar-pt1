@@ -18,4 +18,14 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  it('returns true for an object that has length in it', () => {
+    const nonArrayLikeObj = {
+      'foo': 'bar',
+      'chicken': 'pot-pie',
+      'length': 90
+    };
+    expect(_.isArrayLike(nonArrayLikeObj)).toBe(true);
+  });
+
 });

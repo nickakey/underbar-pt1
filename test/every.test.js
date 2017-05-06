@@ -16,6 +16,11 @@ describe('every()', () => {
       const nums = [1, 3, 5, 6, 7];
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
-
+  });
+  describe('processing an array of strings', () => {
+    it('returns true if all elements in an array are strings and we test for strings', () => {
+      const strings = ['dunkirk', 'the dark knight', 'inception'];
+      expect(_.every(strings, string => (typeof string === 'string'))).toBe(true);
+    });
   });
 });

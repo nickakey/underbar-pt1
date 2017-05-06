@@ -39,5 +39,15 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('iterates every element of an array, passing that element, its corresponding index, and the entire array to the callback', () => {
+    const presidents = ['Lincoln', 'Trump', 'Clinton'];
+    let count = 2;
+    _.each(presidents, function(element, index, array) {
+      expect(element).toEqual(array[index]);
+      count = count * 2;
+    });
+    expect(count).toBe(16);
+  });
 });
 

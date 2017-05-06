@@ -31,4 +31,10 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns true if the target value is among the values of an array', () => {
+    const snacks = ['pizza rolls', 'corn nuts', 'bagel bites', 'hot pockets']
+    expect(_.contains(snacks, 'pizza rolls')).toBe(true);
+  });
+
+
 });

@@ -18,4 +18,9 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  it('rejects strings from array', () => {
+    const array = [2, 'two', 4, 'four'];
+    expect(_.reject(array, element => typeof element !== 'string')).toEqual(['two', 'four']);
+  });
 });

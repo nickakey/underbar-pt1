@@ -23,4 +23,9 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters a string to elements less than 4 characters', () => {
+    const array = ['church', 'ghost', 'rob', 'four'];
+    expect(_.filter(array, word => word.length <= 4)).toEqual(['rob', 'four']);
+  });
 });

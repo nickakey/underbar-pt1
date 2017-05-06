@@ -13,4 +13,11 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('when the function says just to return the accumulator, it just returns the accumulator', () => {
+    const nums = [1, 2, 3, 4, 5];
+    const result = _.reduce(nums, (accumulator, element) => accumulator, 8);
+    console.log('THE result ', result)
+    expect(result).toEqual(8);
+  });
+
 });

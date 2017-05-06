@@ -26,4 +26,8 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns the index of value in the middle of an array', () => {
+    const arr = ['hello', 'bar', 'pie', 'bar', 'bar'];
+    expect(_.indexOf(arr, 'pie')).toBe(2);
+  });
 });

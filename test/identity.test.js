@@ -20,4 +20,15 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  it('returns an array if given an array', () => {
+    const val = ['hello'];
+    expect(_.identity(val)).toBe(val)
+  });
+
+  it('returns undefined if given undefined', () => {
+    const val = undefined;
+    expect(_.identity(val)).toBe(val)
+  });
+
 });

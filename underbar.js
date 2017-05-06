@@ -1,10 +1,11 @@
 // Returns the given value. Seems pointless perhaps but see its use below for providing a default, no-op callback.
+// DONE
 const identity = function(val) {
   return val;
 };
 
 // Returns the first n elements of the given array.
-const first = function(array, n = 1) {
+const first = function(array, n = 1) {  //setting the n as 1 counts as a default thing
   return n === 1 ? array[0] : array.slice(0, n);
 };
 
